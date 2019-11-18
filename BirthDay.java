@@ -2,6 +2,13 @@ package ECB19S2;
 import java.text.*;
 import java.util.*;
 
+/**
+ * @version: V1.0
+ * @author: Pingzhou Li
+ * @className: Birthday
+ * @packageName: ECB19S2
+ * @description: This class is used to check if the birthday is valid and modify the format
+ **/
 public class BirthDay{ 
  private int day=0;
  private int month=0;
@@ -9,8 +16,11 @@ public class BirthDay{
  private static SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
  private Date date;
  private String dateStr;
- 
- 
+
+    /**
+     * @description: Constructor
+     * @param: s
+     * */
   public BirthDay(String s){ 
      dateStr = s;
      String[]temp;  
@@ -51,24 +61,69 @@ public class BirthDay{
 	   date = null;
    }
  }
-  
+
+ /**
+  * @author:  Pingzhou Li
+  * @methodsName: getDay
+  * @description: get day data in birthday
+  * @param:  null
+  * @return: int
+  */
   public int getDay(){
      return day;
 }
+
+    /**
+     * @author:  Pingzhou Li
+     * @methodsName: getMonth
+     * @description: get month data in birthday
+     * @param:  null
+     * @return: int
+     */
   public int getMonth(){
      return month;
    }
-  public int
-  getYear(){
+
+    /**
+     * @author:  Pingzhou Li
+     * @methodsName: geYear
+     * @description: get year data in birthday
+     * @param:  null
+     * @return: int
+     */
+  public int getYear(){
      return year;
    }
+
+    /**
+     * @author:  Pingzhou Li
+     * @methodsName: getDate
+     * @description: get date in birthday
+     * @param:  null
+     * @return: Date
+     */
   public Date getDate(){
      return date;
    }
+
+    /**
+     * @author:  Pingzhou Li
+     * @methodsName: dateString
+     * @description: get date in String type
+     * @param:  null
+     * @return: String
+     */
   public String dateString(){
 	  return dateFormat.format(date);
   }
 
+    /**
+     * @author:  Pingzhou Li
+     * @methodsName: isValidBirthday
+     * @description: check if it is a valid birthday
+     * @param:  null
+     * @return: boolean
+     */
 public boolean isValidBirthday(){
 	if(date!=null&&dateStr!="00-00-00"){
 	   return true;
